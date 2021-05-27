@@ -5,7 +5,7 @@ WebDriver_ = NinetyMinGeneratorClient()
 WebDriver_.surf_website()
 
 
-def test_check_ifheader_menu_is_displayed():
+def test_check_if_header_menu_is_displayed():
     try:
         heders_menu = WebDriver_.find_element_by_css_selector(
             "ul[class$='fixedUl_nkctac']").is_displayed()

@@ -1,4 +1,3 @@
-import re
 from selenium.webdriver.chrome.webdriver import WebDriver
 
 from Infra.web.WebDriverFactory import WebDriverFactory
@@ -10,8 +9,12 @@ class NinetyMinGeneratorClient:
     def __init__(self, browser_type="Chrome"):
         self._driver: WebDriver = WebDriverFactory.create(browser_type)
 
+    @property
+    def driver(self):
+        return self._driver
+
     def surf_website(self):
-        return self._driver.get(self.__produce_url_by_environment_type())
+        self._driver.get(self.__produce_url_by_environment_type())
 
     def teardown(self) -> None:
         self._driver.quit()
