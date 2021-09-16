@@ -27,3 +27,8 @@ web_config[
 web_config[
     "binary_location"] = "/Applications/Chrome.app/Contents/MacOS/Google Chrome"
 web_config["executable_path"] = "/Users/amassalh/Downloads/chromedriver"
+
+
+
+def test():
+    print("hello1")
